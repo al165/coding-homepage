@@ -187,14 +187,14 @@ img.full {
 .horizontal {
 	display: flex;
 	align-items: center;
-	max-width: 100%;
+	max-width: 90%;
+	justify-content: space-evenly;
 }
 
 .horizontal img {
     display: block;
-    max-height: 70%;
-    max-width: 40%;
-    margin: 20px;
+    max-width: 50%;
+    margin: 10px;
 }
 
 .slide-bg {
