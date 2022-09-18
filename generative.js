@@ -1,8 +1,10 @@
-let shapes = document.getElementsByClassName('generative-shape');
+const generativeContainer = document.getElementById("generative");
+for(let i = 0; i < 15; i++){
+    let shape = document.createElement("div");
+    shape.classList.add("generative-shape");
+    generativeContainer.appendChild(shape);
 
-for(let i = 0; i < shapes.length; i++){
-    let shape = shapes[i];
-    let p = i / (shapes.length - 1);
+    let p = i / 14;
 
     shape.style.transform = "translate(-50%, -50%) rotate(" + (8 * i) + "deg)";
     shape.style.width = (70 - p*30) + "vh";
