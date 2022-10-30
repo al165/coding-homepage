@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- head section -->
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Fira+Code&family=Oswald:wght@300;600&display=swap"
+    rel="stylesheet" />
+  <title>coding : coding for the web</title>
+
+  <link href="index.css" rel="stylesheet" />
+  <script src="slideshow.js" defer></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="sticky">
+        <p><a href="index.html">home</a></p>
+        <p><a href="intro.html">intro</a></p>
+        <div class="dropdown">
+            <a href="course.html">course</a>
+            <div class="submenu" id="course-pages">
+                <a class="subpage" href="generative.html">[generative]</a>
+                <a class="subpage" href="web.html">[the web]</a>
+            </div>
+        </div>
+        <p><a href="about.html">about</a></p>
+        <p><a href="contact.html">contact</a></p>
+      </div>
+    </div>
+
+    <div class="main-content">
+
+        <div class="page slideshow">
+            <div class="slide">
+                <h1>A Brief History of the Web</h1>
+            </div>
+            <div class="slide">
+                <p>- from the 1960s, systems were connected together</p>
+                <p>- research institutions, government and military computers</p>
+                <img class="centered" src="images/web/network.png" />
+            </div>
+            <div class="slide">
+                <p>January 1st, 1983 - Internet was born</p>
+                <p>- TCP/IP invented to form a common language between systems on the network</p>
+                <p>- Email, IRC chat, FTP file transfers</p>
+                <p>- but still no "web"</p>
+            </div>
+            <div class="slide">
+                <p>- In 1989, CERN scientist Tim Berners-Lee invents the <em>World Wide Web</em>
+                <p>- December 1990, first browser and website go live</p>
+                <img class="centered" src="images/web/tim_berners-lee.jpg" />
+            </div>
+			<div class="slide">
+    			<p>- HTML was invented to code text formating</p>
+    			<p>- Inspired by print media of the time, includes images, fonts, styles etc</p>
+    			<p>- Web Browsers read this code and renders the content to the screen</p>
+			</div>
+			<div class="slide">
+    			<p><em>The Early Days of the Internet</em></p>
+    			<p>- no longer the domain of institutions, but of the general public</p>
+    			<p>- free and open space to create and discuss</p>
+    			<p>- connected communities and individuals from around the globe</p>
+    			<p>- the <a href="https://ideas.ted.com/an-eye-opening-look-at-the-dot-com-bubble-of-2000-and-how-it-shapes-our-lives-today/">Dot Com</a> bubble</p>
+    			<p>- an <a href="https://medium.com/swlh/a-brief-history-of-internet-culture-and-how-everything-became-absurd-6af862e71c94">Internet culture</a> was born</p>
+			</div>
+			<div class="slide centered">
+    			<div class="horizontal">
+        			<img src="images/web/yahoo.png" />
+        			<img src="images/web/google1998.png" />
+    			</div>
+			</div>
+			<div class="slide">
+    			<p><em>Web 2.0</em></p>
+    			<p>- shift in the webs ethos</p>
+    			<p>- the <em>social</em> web</p>
+    			<p>- new level of interaction and participation</p>
+    			<div class="horizontal">
+        			<img src="images/web/fb_like.png" />
+    			</div>
+			</div>
+			<div class="slide">
+    			<p>The future: <em>Web3</em></p>
+    			<p>- decentralised web</p>
+    			<p>- crypto-currency, tokens, NFTs etc</p>
+    			<p>- the "metaverse"
+			</div>
+        </div>
+
+        <div class="page slideshow">
+            <div class="slide">
+                <h1>Anatomy of the Web</h1>
+            </div>
+            <div class="slide">
+                <p><em>What is a website?</em></p>
+                <p>- a bundle of cross referenced files</p>
+                <p>- HTML, CSS, Javascript, images, fonts etc</p>
+                <p>- together define a webpage</p>
+            </div>
+            <div class="slide">
+                <p><em>How are websites visited?</em></p>
+                <p>files stored on a computer on the network called a "server"</p>
+                <img class="centered" src="images/web/server.png" />
+            </div>
+            <div class="slide">
+                <p>a website URL is converted to an IP address to locate this server</p>
+                <img class="centered" src="images/web/url.png" />
+            </div>
+            <div class="slide">
+                <p>once connected, the browser ("client") makes a "request" for the files</p>
+                <img class="centered" src="images/web/request.png" />
+            </div>
+            <div class="slide">
+                <p>the server "responds" to the client with the requested files</p>
+                <img class="centered" src="images/web/response.png" />
+            </div>
+            <div class="slide">
+                <p>after recieving them over the connection, they are rendered by the browser on the screen</p>
+                <img class="centered" src="images/web/render.png" />
+            </div>
+            <div class="slide">
+                <p><em>"Frontend"</em></p>
+                <p>- computer code that runs on the <em>user</em> side</p>
+                <p>- graphical, visuals, basic interactionsm</p>
+            </div>
+            <div class="slide">
+                <p><em>"Backend"</em></p>
+                <p>- computer code that runs on the <em>server</em> side</p>
+                <p>- web search, image upload, messaging etc</p>
+            </div>
+            <div class="slide">
+                <p>Web Technologies beyond the basics...</p>
+                <p>- Websockets</p>
+                <p>- SQL, PHP, jQuery, Ajax etc</p>
+                <p>- Node.js</p>
+                <p>- Web frameworks: React, Vue, Angular etc</p>
+                <p>- Progressive Web Apps</p>
+                <p>and many more...</p>
+            </div>
+            <div class="slide centered">
+                <p>we will only focus on the basics of the frontend of a website</p>
+            </div>
+            <div class="slide">
+                <p><em>Three core ingredients</em></p>
+                <p>- HTML: defines the <em>content</em> and <em>layout</em> of a webpage</p>
+                <p>- CSS: sets the <em>styles</em> of the elements in the page</p>
+                <p>- JavaScript: for <em>interactive</em> behaviour</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
