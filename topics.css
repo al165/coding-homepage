@@ -1,0 +1,52 @@
+span {
+    font-family: monospace;
+    font-size: 48pt;
+    position: absolute;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#transitions {
+    top: 40%;
+    left: 10%;
+    transition: background-color 2s, transform 2s;
+}
+
+#transitions:hover {
+    background-color: blue;
+    transform: scale(1.5);
+}
+
+#flexbox {
+    border: 2px dashed green;
+    bottom: 30%;
+    right: 35%;
+}
+
+#media {
+    top: 8%;
+    right: 10%;
+}
+
+#text-styles {
+    top: 15%;
+    left: 5%;
+    letter-spacing: -8px;
+    font-style: italic;
+}
+
+#fonts {
+    bottom: 5%;
+    left: 15%;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80pt;
+}
+
+#transformations {
+    top: 50%;
+    right: 10%;
+    transform: rotate(45deg) skew(30deg);
+}
