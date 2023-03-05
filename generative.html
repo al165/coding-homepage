@@ -25,7 +25,7 @@
             <a href="course.html">course</a>
             <div class="submenu" id="course-pages">
                 <a class="subpage" href="generative.html">[generative]</a>
-                <a class="subpage" href="web.html">[the web]</a>
+                <!-- <a class="subpage" href="web.html">[the web]</a> -->
             </div>
         </div>
         <p><a href="about.html">about</a></p>
@@ -43,18 +43,21 @@
 		   		<p>a system of <em>rules</em> or a <em>process</em> that produces some outcome</p>
            </div>
            <div class="slide">
-               <p>example:</p>
-               <p>print either "/" or "\" at random</p>
-               <img src="images/generative/10goto.png">
+               <p>example: "10 PRINT"</p>
+               <p>print either "/" or "\" at random:</p>
+               <img style="width: 1200px" src="images/generative/10goto.png">
            </div>
            <div class="slide">
                <p>example:</p>
-               <p>mathematical system</p>
-               <img src="images/generative/lissajous_pattern.png">
+               <p>mathematical systems</p>
+               <div class="horizontal">
+                    <img src="images/generative/lissajous_pattern.png">
+                    <img src="images/generative/mandelbrot.jpg">
+                </div>
            </div>
            <div class="slide">
                <p>example:</p>
-               <p>simulation of pyhsical process</p>
+               <p>simulation of physical process</p>
                <div class="horizontal">
                    <img src="images/generative/perlin.png">
                    <img src="images/generative/rd-map.png">
@@ -101,40 +104,92 @@
 
         <div class="page slideshow">
             <div class="slide">
-            	<h1>elements of generation</h1>
+            	<h1>elements of generative processes</h1>
             </div>
 
             <div class="slide">
                 <p><b>logic</b></p>
                 <p>- creates rules</p>
                 <p>- decision making (<em>if... then...</em>)</p>
+                <a href="https://beltoforion.de/en/game_of_life/index.php">
+                    <img src="images/generative/conways_gol.png">
+                </a>
             </div>
 
             <div class="slide">
                 <p><b>mathematics</b></p>
-                <p>- function to define position, colors, shape etc</p>
-                <p>- (can be very simple to very complex!)
+                <p>- function to define position, colors, shape, state etc</p>
+                <p>- (can be very simple to very complex!)</p>
+                <a href="https://www.karlsims.com/rd.html">
+                    <img src="images/generative/rd-equation.png">
+                </a>
             </div>
 
             <div class="slide">
-                <p><b>randomness</b></p>
-                <p>- slight variation</p>
-                <p>- noise</p>
-                <p>- "non-deterministic"</p>
+                <div class="horizontal">
+                    <div>
+                        <p><b>randomness</b></p>
+                        <p>- slight variation</p>
+                        <p>- noise</p>
+                        <p>- "non-deterministic"</p>
+                    </div>
+                    <img src="images/generative/random.jpg">
+                </div>
             </div>
 
             <div class="slide">
                 <p><b>input and influence</b></p>
-                <p>- conditioned on some external factor</p>
+                <p>- conditioned or reacts on some external factor</p>
                 <p>- e.g. cursor position, other elements, time, music input, weather data etc</p>
-                <p>- reactive</p>
+                <a href="https://tympanus.net/codrops/2018/03/06/creative-audio-visualizers/">
+                    <img src="images/generative/audio_visualiser.jpg">
+                </a>
             </div>
 
             <div class="slide centered">
                 <h2>exploration!</h2>
             </div>
         </div>
-
+        <div class="page slideshow">
+            <div class="slide">
+                <h1>simulation and nature inspired computing</h1>
+            </div>
+            <div class="slide centered">
+                <p>mathematical models that codify natural processes and systems</p>
+            </div>
+            <div class="slide centered">
+                <p><b>rules, equations and schemes</b></p>
+                <p>that describe</p>
+                <p><b>actions, reactions, movement, and dynamics</b></p>
+                <p>of real life phenomena.</p>
+            </div>
+            <div class="slide">
+                <h2>particle systems</h2>
+                <img style="width: 1200px;" src="images/generative/particles.webp">
+            </div>
+            <div class="slide">
+                <h2>multi-agent systems</h2>
+                <img style="width: 1200px;" src="images/generative/boids.gif">
+            </div>
+            <div class="slide">
+                <h2>L-systems</h2>
+                <img src="images/generative/l-systems.png">
+            </div>
+            <div class="slide">
+                <h2>diffusion-limited aggregation</h2>
+                <img src="images/generative/dla.jpeg">
+            </div>
+            <div class="slide">
+                <h2>differential growth</h2>
+                <a href="https://inconvergent.net/generative/differential-line/">
+                    <img src="images/generative/differential-line.gif">
+                </a>
+            </div>
+            <div class="slide">
+                <h2>reaction diffusion</h2>
+                <img  style="width: 1200px" src="images/generative/reaction-diffusion.png">
+            </div>
+        </div>
 
     </div>
   </div>

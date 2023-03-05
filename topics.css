@@ -6,7 +6,7 @@ span {
 
 a {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 #transitions {
@@ -49,4 +49,55 @@ a {
     top: 50%;
     right: 10%;
     transform: rotate(45deg) skew(30deg);
+}
+
+.gen-links {
+    transition: background-color 2s;
+}
+
+#gol {
+    bottom: 20%;
+    left: 10%;
+}
+
+#gol:hover {
+    background-color: yellow;
+}
+
+#l-systems {
+    top: 10%;
+    left: 5%;
+}
+
+#l-systems:hover {
+    background-color: lightgreen;
+}
+
+
+#boids {
+    top: 15%;
+    right: 15%;
+}
+
+#boids:hover {
+    background-color: lightblue;
+}
+
+
+#rd {
+    bottom: 40%;
+    left: 30%;
+}
+
+#rd:hover {
+    background-color: coral;
+}
+
+#particles {
+    top: 30%;
+    left: 20%;
+}
+
+#particles:hover {
+    background-color: violet;
 }
