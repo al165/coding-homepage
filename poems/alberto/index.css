@@ -1,0 +1,17 @@
+p1 {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+  }
+
+  p2 {
+    position: absolute;
+    top: 40px;
+    left: 360px;
+  }
+
+  p3 {
+    position: absolute;
+    top: 130px;
+    left: 600px;
+  }

@@ -1,0 +1,31 @@
+body{
+    
+    font-family:Geneva, sans-serif;
+    font-size: xx-large;
+    margin: 0;
+}
+
+#main-container{
+    display: flex;
+}
+#left-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-color: red;
+    color: whitesmoke;
+    
+}
+
+#right-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-color:whitesmoke;
+    color:red;
+    
+};

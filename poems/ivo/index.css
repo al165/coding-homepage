@@ -1,0 +1,197 @@
+h1 {
+color: lightskyblue;
+}
+
+h2 {
+    background-color: grey;
+    color: yellow;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+
+}
+a:link {
+    color: yellow;
+    cursor: default;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: yellow;
+ 
+    cursor: default;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: yellow;
+
+    cursor: default;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: yellow;
+
+    cursor: default;
+    text-decoration: none;
+  }
+
+.nice-class {
+    color: white;
+    background-color: yellow;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.boring {
+    font-size: xx-large;
+    background-color: grey;
+    color: yellow;
+}
+
+.americans {
+text-align: justify;
+text-justify: inter-word;
+
+}
+
+.heshe {
+    position: absolute;
+    transform: rotate(20deg);
+    left: 200px;
+    top: 100px;
+}
+
+.insideworld {
+    width: 1000px;
+    height: 100px;
+    text-align: justify;
+}
+
+.zebra {
+    font-size: small;
+    background-color: grey;
+    color: black;
+    text-decoration-style: dotted;
+}
+
+.along {
+    color: grey;
+    text-decoration-style: underline;
+    font-style: italic;
+    text-align: center;
+
+}
+
+.problem {
+    transform: rotate(2deg);
+    left: 1000px;
+    top: 1000px;
+}
+
+.cryo {
+color:lightgrey;
+text-align:center;
+}
+
+.still {
+    color: black;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+
+.chrome {
+    text-align: right;
+    size: xx-large;
+    color: yellow;
+    background: lightgrey;
+}
+
+a.black {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+}
+a.black:link {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+}
+a.black:visited {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+}
+
+a.black:hover {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+}
+a.black:active {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+}
+
+.center {
+    color: yellow;
+    text-align: center;
+
+
+
+}
+
+
+a.alonglink {
+    color: grey;
+    text-decoration-style: underline;
+    font-style: italic;
+    text-align: center;
+    cursor: default;
+}
+a.alonglink:link {
+    color: grey;
+    text-decoration-style: underline;
+    font-style: italic;
+    text-align: center;
+    cursor: default;
+}
+a.alonglink:visited {
+    color: grey;
+    text-decoration-style: underline;
+    font-style: italic;
+    text-align: center;
+    cursor: default;
+
+}
+
+a.alonglink:hover {
+    color: grey;
+    text-decoration-style: underline;
+    font-style: italic;
+    text-align: center;
+    cursor: default;
+
+}
+a.alonglink:active {
+    color: grey;
+    text-decoration-style: underline;
+    font-style: italic;
+    text-align: center;
+    cursor: default;
+
+}

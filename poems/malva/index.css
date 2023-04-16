@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("images/AUTHENTICSans-90.otf");
+}
+
+body {
+    cursor: url('images/brick3.png'), auto;
+}
+
+
+main {
+    width: 100%;
+    height: 100vh;
+    font-family: "MyFont";
+    font-size: small;
+    text-align: center;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+#showingHello {
+    
+}
+
+/*
+.wrapper{
+    background-image: url("images/BART.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.inp{
+    color: black;
+    font-family: "MyFont";
+    font-size: 10vh;
+    background: none;
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+    height: 59vh;
+    width: 77vw;
+    outline: none;
+    border: none;
+    resize: none;
+}
