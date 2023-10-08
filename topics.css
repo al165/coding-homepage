@@ -56,7 +56,7 @@ a {
 }
 
 #gol {
-    bottom: 20%;
+    bottom: 30%;
     left: 10%;
 }
 
@@ -86,7 +86,7 @@ a {
 
 #rd {
     bottom: 40%;
-    left: 30%;
+    right: 10%;
 }
 
 #rd:hover {
@@ -100,4 +100,14 @@ a {
 
 #particles:hover {
     background-color: violet;
+}
+
+#genetic {
+    bottom: 10%;
+    right: 5%;
+}
+
+#genetic:hover a {
+    background-color: midnightblue;
+    color: white;
 }
