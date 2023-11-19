@@ -1,0 +1,144 @@
+body {
+  max-width: 75vw;
+  margin: 0 auto;
+  font-size: larger;
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  justify-content: center;
+}
+
+.image-caption {
+  border-style: double;
+  /* width: fit-content; */
+  max-width: 50vw;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+.image-caption img {
+  max-width: 100%;
+}
+
+.image-caption p {
+  font-style: italic;
+  width: 100%;
+}
+
+#web-document {
+  width: 50vw;
+  border: 1px gray solid;
+  transform: scale(90%);
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow-y: scroll;
+}
+
+#web-document .content {
+  padding: 1em;
+}
+
+#web-document table {
+  margin: 0 auto;
+  border: 1px solid;
+}
+
+#web-document td {
+  padding: 0.5em;
+  border: 1px solid;
+}
+
+#web-document a:visited {
+  color: blue;
+}
+
+#web-document a {
+  text-decoration: underline;
+}
+
+#web-document .row {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Create three unequal columns that floats next to each other */
+#web-document .column {
+  float: left;
+}
+
+#web-document .left {
+  width: 15%;
+}
+
+#web-document .right {
+  width: 10%;
+}
+
+#web-document .middle {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+#web-document .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three dots */
+#web-document .dot {
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Style the input field */
+#web-document input[type=text] {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  margin-top: -8px;
+  height: 25px;
+  color: #666;
+  padding: 5px;
+}
+
+/* Three bars (hamburger menu) */
+#web-document .bar {
+  width: 17px;
+  height: 3px;
+  background-color: #aaa;
+  margin: 3px 0;
+  display: block;
+}
+
+
+#interactive {
+  width: 20vw;
+  padding: 2em;
+  margin: 0 auto;
+  border: 1px black solid;
+}
+#interactive div {
+  margin: 1em 0;
+}
+
+
+#avant-garde {
+  margin-top: 1em;
+}
+
+#avant-garde span {
+  display: inline-block;
+}
