@@ -74,6 +74,7 @@ let jumbleTimeout;
 let popupOpen = false;
 const popup = document.querySelector("#popup");
 const close = document.querySelector("#close");
+let iframe = document.createElement("iframe");
 
 for(const p of projects){
     let title = document.createElement("a");
@@ -82,7 +83,8 @@ for(const p of projects){
         popupOpen = true;
         popup.classList.add("open");
         popup.classList.remove("closed");
-        popup.querySelector("iframe").src = p.link;
+        iframe.src = p.link;
+        popup.appendChild(iframe);
         popup.querySelector("#popup-title").innerHTML = `student: ${p.name}`;
     })
 
@@ -93,6 +95,7 @@ for(const p of projects){
 close.addEventListener("mouseup", (event) => {
     popup.classList.add("closed");
     popup.classList.remove("open");
+    iframe.remove();
 })
 
 function jumbleNames(){
