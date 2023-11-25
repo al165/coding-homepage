@@ -1,0 +1,191 @@
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    width: 100vw;
+    height: 98vh;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.gif {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+
+a {
+    position: absolute;
+    font-size: 32pt;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:visited {
+    color: inherit;
+}
+
+h2 {
+    position: absolute;
+    text-shadow: #FC0 1px 0 10px;
+    color: white;
+    transform: translate(-50%, -50%);
+    bottom: 10%;
+    left: 50%;
+    width: 100%;
+    animation: expand 1.5s cubic-bezier(1, 0, 0, 1) infinite alternate;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.scroll {
+    overflow-x: hidden;
+    position: relative;
+    height: 5em;
+    background-color: rgba(0, 0, 0, 0.363);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.scroll h1 {
+    position: absolute;
+    width: 100%;
+    animation: scrolling 10s linear infinite alternate;
+}
+
+.flashing {
+    animation: infinite;
+    animation-name: blinking;
+    animation-duration: 0.2s;
+}
+
+.rotating {
+    animation: infinite;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes blinking {
+    0% {
+        background-color: transparent;
+        color: white;
+    }
+
+    49% {
+        background-color: transparent;
+        color: white;
+    }
+
+    50% {
+        background-color: yellow;
+        color: black;
+    }
+
+    99% {
+        background-color: yellow;
+        color: black;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(70%);
+    }
+}
+
+@keyframes expand {
+    0% {
+        letter-spacing: normal;
+    }
+
+    100% {
+        letter-spacing: 0.7em;
+    }
+}
+
+#popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: transform 1s;
+    overflow: hidden;
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    border: 2px gray solid;
+    border-style: outset;
+    z-index: 10;
+    box-shadow: 15px 15px 5px black;
+}
+
+#popup iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#popup .row {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+}
+
+.open {
+    transform: translate(-50%, -50%) scale(100%);
+}
+
+.closed {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#close {
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 0.5em;
+    cursor: pointer;
+    background-color: gray;
+    border-style: outset;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#close:hover {
+    background-color: rgb(170, 170, 170);
+}
+
+#popup-title {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 20px;
+}
