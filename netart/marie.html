@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>marie.html</title>
+
+    <style>
+        body {
+            background-color: white;
+            background-image: url(coding.gif);
+            background-position: fixed;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        p {
+            font-size: 12;
+            font-weight: bolder;
+            text-align: left;
+            margin-left: 30px;
+            margin-right: 300px;
+        }
+
+        #pythagoreans {
+            font-size: 12;
+            font-weight: bolder;
+            text-align: left;
+            margin-left: 300px;
+            margin-right: 30px;
+        }
+
+        #subtitle {
+            font-size: 8pt;
+            font-style: italic;
+            margin-left: 520px;
+        }
+
+        #math {
+            position: absolute;
+            top: 1020px;
+            left: 300px;
+
+        }
+
+        #advert {
+            position: absolute;
+            top: 770px;
+            left: 0px;
+            right: 680px;
+            font-style: italic;
+            color: red;
+        }
+
+        #keren {
+            position: absolute;
+            top: 790px;
+            left: 0px;
+            right: 680px;
+            font-size: 12;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style: italic;
+            font-weight: lighter;
+        }
+        #theend {
+            position: absolute;
+            top: 1190px;
+            left: 300px;
+text-align: center;
+            font-style: italic;
+            font-size: 10pt;
+        }
+        #dot {
+            position: absolute;
+            top: 1300px;
+            left: 600px;
+text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: black"> The world’s first computer program</h1>
+    <a href="sophie.html">
+        <img id="portrait" src="marie/ada01.png" width="200">
+    </a>
+    <p id="subtitle"> click the image to see some magic! </p>
+    <p>Lovelace’s program is often called the world’s first computer program.
+        Not everyone agrees that it should be called that. Lovelace’s legacy, it turns out, is one of computing
+        history’s most hotly debated subjects. Walter Isaacson has written that the dispute about the extent and merit
+        of her contributions constitutes a “minor academic specialty.”1 Inevitably, the fact that Lovelace was a woman
+        has made this dispute a charged one. Historians have cited all kinds of primary evidence to argue that the
+        credit given to Lovelace is either appropriate or undeserved. But they seem to spend less time explaining the
+        technical details of her published writing, which is unfortunate, because the technical details are the most
+        fascinating part of the story. Who wouldn’t want to know exactly how a program written in 1843 was supposed to
+        work?</p>
+    <p> In fairness, Lovelace’s program is not easy to explain to the layperson without some hand-waving. It’s the
+        intricacies of her program, though, that make it so remarkable. Whether or not she ought to be known as “the
+        first programmer,” her program was specified with a degree of rigor that far surpassed anything that came
+        before. She thought carefully about how operations could be organized into groups that could be repeated,
+        thereby inventing the loop. She realized how important it was to track the state of variables as they changed,
+        introducing a notation to illustrate those changes. As a programmer myself, I’m startled to see how much of what
+        Lovelace was doing resembles the experience of writing software today.</p>
+    <h1>
+        Sums of Powers
+    </h1>
+
+    <p id="pythagoreans"> The Pythagoreans lived on the shores of the Mediterranean and worshiped numbers. One of their
+        pastimes was making triangles out of pebbles. One pebble followed by a row of two pebbles makes a triangle
+        containing three pebbles. Add another row of three pebbles and you get a triangle containing six pebbles.
+        You can continue like this, each time adding a row with one more pebble in it than the previous row. A triangle
+        with six rows contains 21 pebbles. But how many pebbles does a triangle with 423 rows contain? What the
+        Pythagoreans were looking for was a way to calculate the following without doing all the addition: </p>
+
+
+    <p id="pythagoreans"> 1 +
+        2
+        +
+        3
+        +
+        ⋯
+        +
+        n </p>
+
+
+    <p id="pythagoreans"> They eventually realized that, if you place two triangles of the same size up against each
+        other so that they form a rectangle, you can find the area of the rectangle and divide by two to get the number
+        of pebbles in each of the triangles:
+    </p>
+    <p id="advert"> Advertisement:</p>
+    <p id="keren"> Did you know? Coding is actualy related to weaving! Wanna know more? Check out this <a
+            href="keren.html">link!</a></p>
+    <p id="theend"> More interesting information coming soon. Meanwhile you can enjoy reading <a href="hugo.html">this
+            web</a> - one of the most interesting topics in coding! </p>
+
+    <img id="math" src="marie/triangular.png" width="200">
+    <p id="dot">...</p>
+    <script>
+
+
+        function changeImage() {
+            let images = ["marie/ada01.png", "marie/ada02.jpg", "marie/ada03.jpg"];
+            let randomIndex = Math.floor(Math.random() * images.length);
+            let randomImage = images[randomIndex];
+            document.getElementById('portrait').src = randomImage;
+        }
+
+        function changeBackground() {
+            let images = ["marie/code02.gif", "marie/code01.gif", "marie/code03.gif"];
+            let randomIndex = Math.floor(Math.random() * images.length);
+            let randomImage = images[randomIndex];
+            document.body.style.backgroundImage = "url('" + randomImage + "')";
+        }
+
+        //setInterval(changeImage, 1000);
+
+        changeImage();
+        changeBackground();
+
+    </script>
+
+
+</body>
+
+</html>
