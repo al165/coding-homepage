@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>playground</title>
+</head>
+<body>
+    <span id="text">this is some random text!</span>
+    
+    <style>
+        span {
+            position: absolute;
+        }
+    </style>
+    
+    <script>
+        let text = document.getElementById("text");
+        
+        function randomPosition(){
+            text.style.top = Math.random() * 80 + "%";
+            text.style.left = Math.random() * 80 + "%";
+        }
+
+        setInterval(randomPosition, 500);
+    </script>
+</body>
+</html>
