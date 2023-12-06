@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 50%;
+            padding: 3px;
+            border: 0.5px solid #ccc;
+            border-radius: 2px;
+            resize: vertical;
+        }
+
+        body {
+            background-color: black;
+            cursor: crosshair;
+
+        }
+
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+        }
+
+        label {
+            padding: 10px 10px 10px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #0a0b0b;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 3px;
+            background-color: #6d6767;
+            padding: 5px;
+        }
+
+        input {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+
+        }
+
+        div {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Responsive Form</h2>
+
+
+    <div class="container">
+
+        <form action="/action_page.php">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
