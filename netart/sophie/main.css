@@ -1,0 +1,39 @@
+.image-container {
+    position: relative;
+    width: 50%;
+  }
+   
+  .top {
+    position: absolute;
+    z-index: 1;
+  }
+   
+  .image {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+   
+  .image-container:hover .image {
+    opacity: 1;
+  }
+   
+   
+  .fade-in-image img1 {
+    opacity: 0;
+    animation: fadeIn 5s;
+  }
+   
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+   
+    100% {
+        opacity: 1;
+    }
+  }

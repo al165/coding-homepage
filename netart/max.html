@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="max/styles.css">
+  <title>Moja Strona</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden; /* Hide scrollbars */
+    }
+
+    .first-section {
+      display: flex;
+      height: 25vh;
+      overflow: hidden;
+      position: relative;
+      margin-top: 20px;
+      transition: margin-top 0.3s ease;}
+
+    .carousel-container {
+      display: flex;
+      animation: carouselAnimation 10s linear infinite;
+      transform: translateX(-100%);
+    }
+
+    .image-container {
+      position: relative;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: auto;
+    }
+
+    .image-container img {
+      object-fit: contain;
+      height: 100%;
+      margin: 0;
+      border: none;
+    }
+
+    @keyframes carouselAnimation {
+      0% {
+        transform: translateX(100%);
+        transform-origin: top right;
+      }
+      100% {
+        transform: translateX(-100%);
+        transform-origin: top left;
+      }
+    }
+
+
+    .linkin {
+  /* display: flex; */
+  height: 100%; /* Adjust the height to match the height of the text */
+  background-image: url('https://web.archive.org/web/20090730115003/http://www.geocities.com/CapeCanaveral/9089/chain.gif');
+  background-repeat: repeat-x; /* Repeat only horizontally */
+  position: fixed; /* Set position to fixed */
+   /* Adjust this value based on your layout */
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.bottom-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 10vh;
+  position: fixed;
+  bottom: 0; /* Adjust this value based on your layout */
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.bottom-box {
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 0 10px;
+  background-color: aliceblue;
+  box-sizing: border-box;
+  display: flex; /* Use flexbox for the inner container */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  z-index: 1;
+
+}
+
+    /* Start https://www.cursors-4u.com */ * {cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1149.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1149.png), auto !important;} /* End https://www.cursors-4u.com */
+  </style>
+</head>
+<body>
+  <section id="section1" class="image-section first-section">
+    <div class="carousel-container">
+      <div class="image-container" data-folder="m"></div>
+      <div class="image-container" data-folder="a"></div>
+      <div class="image-container" data-folder="k"></div>
+      <div class="image-container" data-folder="s"></div>
+      <div class="image-container" data-folder="y"></div>
+      <div class="image-container" data-folder="m"></div>
+      <div class="image-container" data-folder="i"></div>
+      <div class="image-container" data-folder="l"></div>
+      <div class="image-container" data-folder="i"></div>
+      <div class="image-container" data-folder="a"></div>
+      <div class="image-container" data-folder="n"></div>
+    </div>
+  </section>
+
+
+  <section class="bottom-boxes">
+    <div class="bottom-box"><a href="donna.html">DONNA</a></div>
+    <div class="bottom-box"><a href="misha.html">MISHA</a></div>
+    <div class="bottom-box"><a href="luca.html">LUCA</a></div>
+    <div class="linkin"></div>
+    
+  </section>
+
+
+
+
+  <!-- <script src="script.js"></script> -->
+  <!-- JavaScript code for image loading and animation -->
+  <script>
+    // Function to load a random image from a folder
+    function loadRandomImage(folder, container) {
+      // Create a new Image element
+      const img = new Image();
+
+      // Event handler for image load
+      img.onload = function () {
+        container.innerHTML = ''; // Clear container
+        container.appendChild(img); // Append the loaded image
+      };
+
+      // Event handler for image load error
+      img.onerror = function () {
+        console.error(`No images found in folder: ${folder}`);
+        // Display a message or placeholder if no image is available
+        // container.innerHTML = '<p>No image available</p>';
+
+        // Load any available image from the folder
+        const availableImages = getAvailableImages(folder);
+        if (availableImages.length > 0) {
+          const randomIndex = Math.floor(Math.random() * availableImages.length);
+          img.src = `max/${folder}/${availableImages[randomIndex]}`;
+        }
+      };
+
+      // Generate a random number for the image file
+      const randomImageNumber = Math.floor(Math.random() * 7) + 1; // Assuming you have up to 7 images
+
+      // Set the source of the image
+      img.src = `max/${folder}/${randomImageNumber}.gif`;
+    }
+
+    // Function to get available images in a folder
+    function getAvailableImages(folder) {
+      // Example array of available images, replace it with actual logic to fetch images
+      const availableImages = ['1.gif', '2.gif', '3.gif', '4.gif', '5.gif', '6.gif', '7.gif'];
+      return availableImages;
+    }
+
+    // Add hover event listeners to each image-container
+    document.querySelectorAll('.image-section').forEach((section, sectionIndex) => {
+      section.querySelectorAll('.image-container').forEach((container, index) => {
+        let folder;
+
+        const folders = "maksymilian";
+        folder = folders[sectionIndex * 6 + index]
+
+        // Load initial random image
+        loadRandomImage(folder, container);
+
+        // Add hover event listener to reload image on hover
+        container.addEventListener('mouseenter', () => {
+          loadRandomImage(folder, container);
+        });
+      });
+    });
+
+    // Add event listener to the carousel container to reload images on animation iteration
+    document.querySelector('.carousel-container').addEventListener('animationiteration', () => {
+      // Reload images in all image-containers within image-sections
+      document.querySelectorAll('.image-section .image-container').forEach((container) => {
+        const folder = container.getAttribute('data-folder');
+        loadRandomImage(folder, container);
+      });
+    });
+  </script>
+   <!-- <script> document.addEventListener('mousemove', (e) => {
+      const movingBackground = document.getElementById('movingBackground');
+      const mouseX = e.clientX / window.innerWidth;
+      const mouseY = e.clientY / window.innerHeight;
+
+      const moveX = -mouseX * (movingBackground.offsetWidth - window.innerWidth);
+      const moveY = -mouseY * (movingBackground.offsetHeight - window.innerHeight);
+
+      movingBackground.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+  </script> -->
+
+
+
+<script>
+    document.addEventListener('mousemove', (e) => {
+      const firstSection = document.querySelector('.first-section');
+      const mouseX = e.clientX / window.innerWidth;
+
+      // Calculate the margin based on the mouse x position
+      const margin = mouseX * 400; // Adjust this factor as needed
+
+      // Apply the margin to the top of .first-section
+      firstSection.style.marginTop = `${margin}px`;
+    });
+  </script>
+  <script type="text/javascript">
+    // <![CDATA[
+    var colour = "random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+    var sparkles = 2000;
+
+    /****************************
+    *  Tinkerbell Magic Sparkle *
+    *(c)2005-13 mf2fm web-design*
+    *  http://www.mf2fm.com/rv  *
+    * DON'T EDIT BELOW THIS BOX *
+    ****************************/
+    var x = ox = 400;
+    var y = oy = 700;
+    var swide = 800;
+    var shigh = 600;
+    var sleft = sdown = 0;
+    var tiny = new Array();
+    var star = new Array();
+    var starv = new Array();
+    var starx = new Array();
+    var stary = new Array();
+    var tinyx = new Array();
+    var tinyy = new Array();
+    var tinyv = new Array();
+
+    window.onload = function () {
+      if (document.getElementById) {
+        var i, rats, rlef, rdow;
+        for (var i = 0; i < sparkles; i++) {
+          var rats = createDiv(3, 3);
+          rats.style.visibility = "hidden";
+          rats.style.zIndex = "999";
+          document.body.appendChild(tiny[i] = rats);
+          starv[i] = 0;
+          tinyv[i] = 0;
+          var rats = createDiv(5, 5);
+          rats.style.backgroundColor = "transparent";
+          rats.style.visibility = "hidden";
+          rats.style.zIndex = "999";
+          var rlef = createDiv(1, 5);
+          var rdow = createDiv(5, 1);
+          rats.appendChild(rlef);
+          rats.appendChild(rdow);
+          rlef.style.top = "2px";
+          rlef.style.left = "0px";
+          rdow.style.top = "0px";
+          rdow.style.left = "2px";
+          document.body.appendChild(star[i] = rats);
+        }
+        set_width();
+        sparkle();
+      }
+    }
+
+    function sparkle() {
+      var c;
+      if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+        ox = x;
+        oy = y;
+        for (c = 0; c < sparkles; c++) if (!starv[c]) {
+          star[c].style.left = (starx[c] = x) + "px";
+          star[c].style.top = (stary[c] = y + 1) + "px";
+          star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+          star[c].childNodes[0].style.backgroundColor = star[c].childNodes[1].style.backgroundColor = (colour == "random") ? newColour() : colour;
+          star[c].style.visibility = "visible";
+          starv[c] = 50;
+          break;
+        }
+      }
+      for (c = 0; c < sparkles; c++) {
+        if (starv[c]) update_star(c);
+        if (tinyv[c]) update_tiny(c);
+      }
+      setTimeout("sparkle()", 50);
+    }
+
+    function update_star(i) {
+      if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+      if (starv[i]) {
+        stary[i] += 1 + Math.random() * 3;
+        starx[i] += (i % 5 - 2) / 5;
+        if (stary[i] < shigh + sdown) {
+          star[i].style.top = stary[i] + "px";
+          star[i].style.left = starx[i] + "px";
+        }
+        else {
+          star[i].style.visibility = "hidden";
+          starv[i] = 0;
+          return;
+        }
+      }
+      else {
+        tinyv[i] = 50;
+        tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+        tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+        tiny[i].style.width = "2px";
+        tiny[i].style.height = "2px";
+        tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+        star[i].style.visibility = "hidden";
+        tiny[i].style.visibility = "visible"
+      }
+    }
+
+    function update_tiny(i) {
+      if (--tinyv[i] == 25) {
+        tiny[i].style.width = "1px";
+        tiny[i].style.height = "1px";
+      }
+      if (tinyv[i]) {
+        tinyy[i] += 1 + Math.random() * 3;
+        tinyx[i] += (i % 5 - 2) / 5;
+        if (tinyy[i] < shigh + sdown) {
+          tiny[i].style.top = tinyy[i] + "px";
+          tiny[i].style.left = tinyx[i] + "px";
+        }
+        else {
+          tiny[i].style.visibility = "hidden";
+          tinyv[i] = 0;
+          return;
+        }
+      }
+      else tiny[i].style.visibility = "hidden";
+    }
+
+    document.onmousemove = mouse;
+    function mouse(e) {
+      if (e) {
+        y = e.pageY;
+        x = e.pageX;
+      }
+      else {
+        set_scroll();
+        y = event.y + sdown;
+        x = event.x + sleft;
+      }
+    }
+
+    window.onscroll = set_scroll;
+    function set_scroll() {
+      if (typeof (self.pageYOffset) == 'number') {
+        sdown = self.pageYOffset;
+        sleft = self.pageXOffset;
+      }
+      else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+        sdown = document.body.scrollTop;
+        sleft = document.body.scrollLeft;
+      }
+      else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+        sleft = document.documentElement.scrollLeft;
+        sdown = document.documentElement.scrollTop;
+      }
+      else {
+        sdown = 0;
+        sleft = 0;
+      }
+    }
+
+    window.onresize = set_width;
+    function set_width() {
+      var sw_min = 999999;
+      var sh_min = 999999;
+      if (document.documentElement && document.documentElement.clientWidth) {
+        if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+        if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+      }
+      if (typeof (self.innerWidth) == 'number' && self.innerWidth) {
+        if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+        if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+      }
+      if (document.body.clientWidth) {
+        if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min) sw_min = document.body.clientWidth;
+        if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min) sh_min = document.body.clientHeight;
+      }
+      if (sw_min == 999999 || sh_min == 999999) {
+        sw_min = 800;
+        sh_min = 600;
+      }
+      swide = sw_min;
+      shigh = sh_min;
+    }
+
+    function createDiv(height, width) {
+      var div = document.createElement("div");
+      div.style.position = "absolute";
+      div.style.height = height + "px";
+      div.style.width = width + "px";
+      div.style.overflow = "hidden";
+      return (div);
+    }
+
+    function newColour() {
+      var c = new Array();
+      c[0] = 255;
+      c[1] = Math.floor(Math.random() * 256);
+      c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+      c.sort(function () { return (0.5 - Math.random()); });
+      return ("rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")");
+    }
+    // ]]>
+  </script>
+</body>
+</html>

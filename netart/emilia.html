@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8" />
+ <title>title</title>
+ <style>
+
+    
+    
+     body {
+        
+        
+         background-image: url('emilia/glitch.jpg');
+         background-repeat: repeat;
+         background-size: cover;
+         background-attachment: fixed;
+         
+        
+         
+     }
+
+     a {
+        color: white;
+     }
+
+
+ </style>
+
+
+
+ <style>
+
+@keyframes glitch {
+ 0% {
+  clip: rect(10px, 9999px, 10px, 0);
+ }
+ 5% {
+  clip: rect(30px, 9999px, 9999px, 0);
+ }
+ 10% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 15% {
+  clip: rect(0px, 9999px, 9999px, 0);
+ }
+ 20% {
+  clip: rect(10px, 9999px, 10px, 0);
+ }
+ 25% {
+  clip: rect(0px, 9999px, 9999px, 0);
+ }
+ 30% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 35% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 40% {
+  clip: rect(0px, 9999px, 9999px, 0);
+  color: orange;
+ }
+ 45% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 50% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 55% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 60% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 65% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 70% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 75% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 80% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 85% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 90% {
+  clip: rect(10px, 9999px, 9999px, 0);
+  color: white;
+ }
+ 95% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+ 100% {
+  clip: rect(10px, 9999px, 9999px, 0);
+ }
+}
+
+
+
+
+     p {
+        
+        animation: glitch 1s infinite;
+         color: white;
+         position: absolute;
+         top: 200px;
+         left: 300 px;
+         font-size: 2em; /* or 20px, 2rem, etc. */
+         text-shadow: 0 0 10px white;
+     }
+ </style>
+
+
+
+</head>
+<body>
+ <h1 id = "text"><a href="jisu.html">GLITCHART</a></h1>
+
+
+ <p id="paragraph"><a href="melody.html">Glitchart is the practice of using digital
+    or analog errors for aestethic purposes by 
+    either corrupting digital data or physically manipulating electronic devices </a></p>
+
+    <p1 id="2paragraph"><a href="sophie.html">As a technical word, a glitch is the unexpected result of a malfunction, especially occurring in software, video games, images, videos, audio, and other digital artefacts.</p>
+
+ <style>
+     h1 {
+         color: white;
+         position: absolute;
+         top: 100px;
+         left: 300 px;
+         font-size: 2em; /* or 20px, 2rem, etc. */
+         text-shadow: 0 0 10px pink;
+     }
+ </style>
+
+<style>
+    p1 {
+        animation: glitch 1s infinite;
+         color: white;
+         position: absolute;
+         top: 500px;
+         left: 300 px;
+         font-size: 2em; /* or 20px, 2rem, etc. */
+         text-shadow: 0 0 10px white;
+    }
+</style>
+
+
+
+<audio loop autoplay>
+    <source src="emilia/glitch.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+   </audio>
+
+
+
+
+
+
+
+ <script>
+    function draw1(){
+        let element = document.getElementById("paragraph")
+ 
+        element.style.top = Math.random(); 
+        element.style.left= Math.random();
+    }
+ 
+    setInterval(draw, 1000);
+ </script>
+
+ <script>
+     function draw2(){
+         let element = document.getElementById("text")
+
+         element.style.top = Math.random(); 
+         element.style.left= Math.random();
+     }
+
+     setInterval(draw2, 1000);
+ </script>
+
+<script>
+    function draw3(){
+        let element = document.getElementById("2paragraph")
+ 
+        element.style.top = Math.random(); 
+        element.style.left= Math.random();
+    }
+ 
+    setInterval(draw3, 1000);
+ </script>
+
+<script>
+function changeBackgroundColor() {
+   let randomColor = getRandomColor();
+   document.body.style.backgroundColor = randomColor;
+}
+
+
+function getRandomColor() {
+   var letters = '0123456789ABCDEF';
+   var color = '#';
+   for (var i = 0; i < 6; i++) {
+       color += letters[Math.floor(Math.random() * 16)];
+   }
+   return color;
+}
+
+
+let textElement1 = document.getElementById("paragraph");
+let textElement2 = document.getElementById("text");
+let textElement3 = document.getElementById("2paragraph");
+
+textElement1.addEventListener('animationstart', changeBackgroundColor);
+textElement2.addEventListener('animationstart', changeBackgroundColor);
+textElement3.addEventListener('animationstart', changeBackgroundColor);
+
+
+
+</script>
+
+ 
+
+
+
+
+</body>
+</html>

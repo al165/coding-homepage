@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to South Park</title>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url('snowing.gif') center/cover fixed;
+            font-family: 'Arial', sans-serif;
+            color: orange;
+            font-size: 20pt;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .image-container {
+            position: absolute;
+            width: 45%;
+            height: 45%;
+        }
+
+        .top-left {
+            top: 0;
+            left: 0;
+            animation: wiggle-top-left 2s infinite;
+        }
+
+        .top-right {
+            top: 0;
+            right: 0;
+            animation: wiggle-top-right 2s infinite;
+        }
+
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+            animation: wiggle-bottom-left 2s infinite;
+        }
+
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+            animation: wiggle-bottom-right 2s infinite;
+        }
+
+        h1 {
+            z-index: 1;
+            animation: bounce 2s infinite;
+        }
+
+        a {
+            z-index: 2;
+        }
+
+        @keyframes wiggle-top-left {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(5px, 5px); }
+            50% { transform: translate(0, 0); }
+            75% { transform: translate(-5px, -5px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes wiggle-top-right {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-5px, 5px); }
+            50% { transform: translate(0, 0); }
+            75% { transform: translate(5px, -5px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes wiggle-bottom-left {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(5px, -5px); }
+            50% { transform: translate(0, 0); }
+            75% { transform: translate(-5px, 5px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes wiggle-bottom-right {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-5px, -5px); }
+            50% { transform: translate(0, 0); }
+            75% { transform: translate(5px, 5px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container top-left">
+        <a href="donna.html" target="_blank">
+            <img src="Stan.jpg" alt="Image 1" style="width: 100%; height: 100%;">
+        </a>
+    </div>
+
+    <div class="image-container top-right">
+        <a href="cliff.html" target="_blank">
+            <img src="KyleBroflovski.png" alt="Image 2" style="width: 100%; height: 100%;">
+        </a>
+    </div>
+
+    <div class="image-container bottom-left">
+        <a href="misha.html" target="_blank">
+            <img src="KennyMcCormick.png" alt="Image 3" style="width: 100%; height: 100%;">
+        </a>
+    </div>
+
+    <div class="image-container bottom-right">
+        <a href="https://www.wikihow.com/Get-a-Girlfriend" target="_blank">
+            <img src="EricCartman.png" alt="Image 4" style="width: 100%; height: 100%;">
+        </a>
+    </div>
+
+    <h1>Welcome to South Park</h1>
+</body>
+
+</html>
+
+
+
+
+
+

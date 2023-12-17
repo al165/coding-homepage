@@ -1,0 +1,45 @@
+.parent{
+    height: 100vh;
+    
+}
+
+.child-one{
+    position: absolute;
+    height:100vh;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;    
+    
+}
+
+.child-two{
+    background-image: url("figuregifbl.gif");
+    background-repeat: repeat;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    mix-blend-mode: lighten;
+    z-index: 3;
+   
+}
+
+.child-three{
+    position: absolute;
+    height: 100vh;
+    top: 0px;
+    left: 100px;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+   
+}
+
+.child-four{
+    position: absolute;
+    height: 100vh;
+    top: 0px;
+    right: 100px;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+   
+}
+
